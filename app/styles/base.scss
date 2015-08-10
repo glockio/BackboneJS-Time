@@ -1,0 +1,15 @@
+.valid-field{
+  background: green;
+}
+.invalid-field{
+  background: red;
+}
+
+.hidden-focus-label{
+
+  input{
+    &:focus ~ label{
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "timesheet",
+  "version": "0.0.0",
+  "authors": [
+    "Greg Laughlin"
+  ],
+  "description": "a simple backbone js app",
+  "main": "app.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "backbone",
+    "js"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "backbone": "~1.2.1",
+    "foundation": "~5.5.2",
+    "ionicons": "~2.0.1",
+    "moment": "~2.10.6"
+  },
+  "devDependencies": {}
+}

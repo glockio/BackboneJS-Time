@@ -1,0 +1,15 @@
+Searching 11664 files for "BcHydro"
+
+/Users/Greg/Play/timesheet/_build/js/build.js:
+   97      hasProp = {}.hasOwnProperty;
+   98  
+   99:   BcHydro.Views.TimeSheetLayout = (function(superClass) {
+  100      extend(TimeSheetLayout, superClass);
+  101  
+
+/Users/Greg/Play/timesheet/app/views/timesheet_layout_view.coffee:
+    1: class BcHydro.Views.TimeSheetLayout extends Backbone.View
+    2  
+    3  
+
+2 matches across 2 files
