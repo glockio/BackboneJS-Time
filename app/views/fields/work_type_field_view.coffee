@@ -20,7 +20,7 @@ class App.Views.WorkTypeFieldView extends App.Views.FormFieldView
 
   tpl_string:
     '
-      <lable> Work Type Select</label>
+      <label> Work Type Select</label>
       <select name="work_type" id="work-type">
       </select>
     '

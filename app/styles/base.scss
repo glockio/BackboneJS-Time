@@ -1,8 +1,17 @@
 .valid-field{
   background: green;
+
+  input:focus{
+    background: green;
+  }
 }
 .invalid-field{
   background: red;
+
+  input:focus{
+    background: red;
+
+  }
 }
 
 .hidden-focus-label{

@@ -9,7 +9,7 @@
   </head>
 
   <body>
-    <script ""></script>
+
     <script src="js/lib.js"></script>
     <div id="app-container"></div>
     <script src="js/build.js"></script>
@@ -17,21 +17,24 @@
     <div class="spinner-overlay">
       <img  class="spinner-image" src="images/spinner.gif">
     </div>
+
     <script>
       window._app = new App.Controller // bootstrap app
     </script>
-    <script id="tpl-test" type="text/template">
-      <h1> <%= 1+ 3 %></h1>
-    </script>
 
-    <script id="contactTemplate" type="text/template">
-        <img src="{{ photo }}" alt="{{ name }}" />
-        <h1>{{ name }}<span>{{ type }}</span></h1>
-        <div>{{ address }}</div>
-        <dl>
-            <dt>Tel:</dt><dd>{{ tel }}</dd>
-            <dt>Email:</dt><dd><a href="mailto:{{ email }}">{{ email }}</a></dd>
-        </dl>
+
+    <script id="submitted-template" type="text/template">
+      <div class="success-wrapper">
+        <span class="success-icon"></span>
+        <div class="message">
+          <div class="">
+            Thank you <span class="email"> <%= email %></span>
+          </div>
+          <div class="details">
+            You have logged 12 hours and 15 mins of work today
+          </div>
+        </div>
+      </div>
     </script>
 
 

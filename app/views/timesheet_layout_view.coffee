@@ -11,6 +11,7 @@ class App.Views.TimeSheetLayout extends Backbone.View
     @$header_section = @$("#header-section")
     @$content_area   = @$("#content-area")
 
+
   _position: ->
     @$wrapper.html @el
 
@@ -30,7 +31,7 @@ class App.Views.TimeSheetLayout extends Backbone.View
 
       <div class="row">
         <div class="small-12 columns "id="footer-section">
-          Footer
+
         </div>
       </div>
     '

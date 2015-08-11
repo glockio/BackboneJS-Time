@@ -1,5 +1,9 @@
 window.App = {
   Models: {}
   Collections: {}
-  Views: {}
+  Views: {
+
+    NewTimeSheet:{}
+    Submitted: {}
+  }
 }
