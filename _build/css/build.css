@@ -1,0 +1,136 @@
+body {
+  font-family: "Avenir Next", sans-serif;
+  color: 062531; }
+
+#app-container .field-wrapper {
+  position: relative; }
+  #app-container .field-wrapper .valid-icon {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    color: green;
+    display: none; }
+  #app-container .field-wrapper label {
+    position: absolute;
+    top: -15px;
+    left: 10px;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 1px;
+    font-weight: 400; }
+  #app-container .field-wrapper #work-type-label {
+    top: 0px; }
+  #app-container .field-wrapper input, #app-container .field-wrapper select, #app-container .field-wrapper textarea {
+    border-radius: 6px;
+    margin-top: 20px; }
+  #app-container .field-wrapper .error-msg {
+    position: absolute;
+    top: 8px;
+    font-size: 12px;
+    right: 10px;
+    display: none; }
+  #app-container .field-wrapper.valid-field input {
+    border-color: #A9C6A9; }
+  #app-container .field-wrapper.valid-field .valid-icon {
+    display: block; }
+  #app-container .field-wrapper.invalid-field input {
+    border-color: #E5BDBD;
+    background-color: #FBF2F2;
+    color: #C44949; }
+  #app-container .field-wrapper.invalid-field .error-msg {
+    display: block; }
+  #app-container .field-wrapper.invalid-field .valid-icon {
+    display: none; }
+
+.valid-field:hover {
+  background-color: #fafafa;
+  border-color: #cccccc; }
+
+.hidden-focus-label input:focus ~ label, .hidden-focus-label textarea:focus ~ label, .hidden-focus-label select:focus ~ label {
+  display: none; }
+
+#header-section {
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  background: white;
+  height: 120px;
+  line-height: 120px;
+  text-align: center;
+  border-bottom: 10px solid #EFEFEF;
+  background: rgba(255, 193, 17, 0.98);
+  background: rgba(74, 81, 90, 0.98);
+  background: rgba(46, 182, 235, 0.98);
+  font-weight: 700;
+  color: white;
+  font-size: 29px;
+  left: 0px; }
+
+.header-background {
+  background-image: url("/images/bk.gif");
+  position: absolute;
+  top: 0px;
+  height: 120px;
+  width: 100%;
+  left: 0px;
+  z-index: 1; }
+
+#content-area {
+  position: fixed;
+  top: 120px;
+  padding-top: 20px;
+  padding-bottom: 170px;
+  height: 100%;
+  overflow: scroll;
+  width: 100%;
+  background: #F8F8F8;
+  color: #646464;
+  left: 0px;
+  background-image: -webkit-linear-gradient(bottom, #F3F3F3 60%, #fff 100%);
+  background-image: linear-gradient(bottom, #F3F3F3 60%, #fff 100%); }
+
+#footer-section {
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  background: #FAC815;
+  height: 50px;
+  border-top: 3px solid #2eb6eb;
+  z-index: 2;
+  background: white;
+  text-align: center;
+  line-height: 50px;
+  font-weight: 300;
+  font-size: 20px;
+  left: 0px; }
+  #footer-section .action {
+    height: 100%;
+    display: block;
+    color: #288CB3;
+    background: #f8f8f8;
+    border-radius: 6px; }
+
+.spinner-overlay {
+  display: none;
+  z-index: 900;
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  background-color: white;
+  opacity: 0.8; }
+  .spinner-overlay .spinner-image {
+    position: absolute;
+    top: 50%; }
+  .spinner-overlay.show-spinner {
+    display: block; }
+
+#work-type-label {
+  top: 0px; }
+
+.submitted-timesheet .success-wrapper {
+  text-align: center; }
+
+.submitted-timesheet .success-icon {
+  color: #9DC69D;
+  font-size: 140px; }

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeSheet</title>
+    <link href="css/lib.css" rel="stylesheet">
+    <link href="css/build.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <script src="js/lib.js"></script>
+    <div id="app-container"></div>
+    <script src="js/build.js"></script>
+
+    <div class="spinner-overlay">
+      <img  class="spinner-image" src="images/spinner.gif">
+    </div>
+
+    <script>
+      window._app = new App.Controller // bootstrap app
+    </script>
+
+
+    <script id="submitted-template" type="text/template">
+      <div class="success-wrapper">
+        <span class="success-icon ion-ios-checkmark-outline valid-icon"></span>
+        <div class="message">
+          <div class="">
+            Thank you <strong class="email"> <%= email %></strong>
+          </div>
+          <div class="details">
+            You have logged <%= hour %>  hours and <%= min %>  mins of work today
+          </div>
+        </div>
+      </div>
+    </script>
+
+
+  </body>
+
+</html>
