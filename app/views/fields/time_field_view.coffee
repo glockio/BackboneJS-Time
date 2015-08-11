@@ -1,15 +1,17 @@
 class App.Views.TimeFieldView extends App.Views.FormFieldView
 
-  initialize: (options)->
+  className: "hidden-focus-label field-wrapper"
+
+  initialize: (options={})->
     @_render()
     @_position()
     @time = new App.Models.Time
+    @model.time = @time
     @$time_input = @$("#time-input")
-    @$error_msg  = @$("#error-msg")
+    @$error_msg  = @$(".error-msg")
 
   events:
     "keyup": "request_validate_time"
-
 
   request_validate_time: ->
     @validate_with_delay @_validate_time
@@ -37,11 +39,10 @@ class App.Views.TimeFieldView extends App.Views.FormFieldView
 
   tpl_string:
     '
+      <input type="text"name="time" id=time-input>
       <label for="time">Time</label>
-      <div class="field-wrapper">
-        <input type="text"name="time" id=time-input>
-        <span id="error-msg">here</span>
-      </div>
+      <span class="ion-ios-checkmark-outline valid-icon"></span>
+      <span class="error-msg">here</span>
     '
 
 

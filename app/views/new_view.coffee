@@ -6,6 +6,8 @@ class App.Views.NewTimeSheetView extends App.View
     {wrapper_prefix: "work-type", view_name: "WorkTypeFieldView" }
   ]
 
+  className: "new-timesheet"
+
   render_sections: true
   NameSpace: "NewTimeSheet"
 
@@ -22,20 +24,21 @@ class App.Views.NewTimeSheetView extends App.View
 
   clear_form: (e, view) ->
     @$form[0].reset()
-    @model.reset()
+    @model.clear()
     _(@dynamic_fields).each (field) => field.view.reset()
-
 
   submit_timesheet: (e, view) ->
     @app.show_spinner()
+    data = @$form.serializeObject()
+
+    @model.set data
 
     callback = () =>
+
       @app.set_transit_state "timesheet/submitted", model: @model
       @app.hide_spinner()
 
     setTimeout callback , 1000
-
-
 
   _render: ->
     @$el.html _.template(@tpl_string)
@@ -46,7 +49,7 @@ class App.Views.NewTimeSheetView extends App.View
 
   _render_fields: ->
     _(@dynamic_fields).each (field) => # need to bind this here
-      view = new App.Views[field.view_name] app: @app, parent: this, wrapper: @$("##{field.wrapper_prefix}-wrapper")
+      view = new App.Views[field.view_name] app: @app, parent: this,  model: @model, wrapper: @$("##{field.wrapper_prefix}-wrapper")
       field.view = view
 
   tpl_string:
@@ -63,8 +66,10 @@ class App.Views.NewTimeSheetView extends App.View
 
       <div class="row" >
        <div class="small-12 columns">
-         <textarea name="message" id="" cols="30" rows="10"></textarea>
-         <input type="text" for="message" name="message" id="message">
+         <div class="field-wrapper hidden-focus-label">
+           <textarea name="message" placeholder="Optional Message" cols="30" rows="10"></textarea>
+           <label for="message">Message</label>
+         </div>
        </div>
       </div>
 

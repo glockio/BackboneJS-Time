@@ -2,7 +2,7 @@ class App.Views.EmailFieldView extends App.Views.FormFieldView
 
   EMAIL_REGEX: /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i
 
-  className: "hidden-focus-label"
+  className: "hidden-focus-label field-wrapper"
 
   initialize: (options)->
     @_render()
@@ -22,11 +22,9 @@ class App.Views.EmailFieldView extends App.Views.FormFieldView
       @mark_as_invalid_field()
 
 
-
-
-
   tpl_string:
     '
       <input type="text" name="email" id="email-input">
-      <label for="email">Email!</label>
+      <label for="email">Email</label>
+      <span class="ion-ios-checkmark-outline valid-icon"></span>
      '

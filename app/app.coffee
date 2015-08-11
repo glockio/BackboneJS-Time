@@ -30,8 +30,6 @@ class App.Controller extends Backbone.Router
 
 
   set_transit_state: (state, options={}) =>
-    console.log "caing set transit_states"
-
     state_handler = @[@transit_states[state]]
     state_handler.apply(this, [options]) if state_handler instanceof Function
 

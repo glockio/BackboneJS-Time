@@ -4,19 +4,17 @@ class App.Views.Submitted.FooterView extends App.View
     @_render()
     @_position()
 
-
   events:
     "click #new-timesheet" : "new_timesheet"
 
   new_timesheet: ->
     @parent.$el.trigger "new_timesheet"
+
   _render: ->
     @$el.html  _.template(@tpl_string)
 
-
   _position: ->
     @$wrapper.html @el
-
 
   tpl_string:
     '

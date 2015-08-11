@@ -23,9 +23,10 @@ class App.Views.TimeSheetLayout extends Backbone.View
         </div>
       </div>
 
+      <div class="header-background"></div>
+
       <div class="row">
         <div class="small-12 columns" id="content-area">
-          Header Section
         </div>
       </div>
 

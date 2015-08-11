@@ -1,5 +1,7 @@
-$header-height: 50px;
+$header-height: 120px;
 $footer-height: 50px;
+$black-blue: #5A595D;
+// $gold: rgba(255, 193, 17, 1);
 
 #header-section{
   width: 100%;
@@ -10,7 +12,25 @@ $footer-height: 50px;
   line-height: $header-height;
   text-align: center;
   border-bottom: 10px solid #EFEFEF;
-  font-family: "HUGEAvantGardeBold",sans-serif
+
+  background: rgba(255, 193, 17, 0.98);
+  background: rgba(74, 81, 90, 0.98);
+  background: rgba(46, 182, 235, .98);
+  // font-family: "HUGEAvantGardeBold",sans-serif;
+  font-weight: 700; color: white;
+  font-size: 29px;
+  left: 0px;
+
+}
+
+.header-background{
+  background-image: url("/images/bk.gif");
+  position: absolute;
+  top: 0px;
+  height: $header-height;
+  width: 100%;
+  left: 0px;
+  z-index: 1;
 }
 
 
@@ -24,16 +44,36 @@ $footer-height: 50px;
   width: 100%;
   background: #F8F8F8;
   color: #646464;
+  left: 0px;
+
+  background-image: linear-gradient(bottom, #F3F3F3 60%, #fff 100%);
+  // background-image: -o-linear-gradient(bottom, #FFD51A 50%, #FAC815 50%);
+  // background-image: -moz-linear-gradient(bottom, #FFD51A 50%, #FAC815 50%);
+  // background-image: -webkit-linear-gradient(bottom, #FFD51A 50%, #FAC815 50%);
+  // background-image: -ms-linear-gradient(bottom, #FFD51A 50%, #FAC815 50%);
 
 }
 #footer-section{
   width: 100%;
   position: fixed;
   bottom: 0px;
-  // background: #000;
+  background: #FAC815;
   height: $footer-height;
-  border-top: 3px solid #8ACDE4;
+  border-top: 3px solid rgba(46, 182, 235, 1);
   z-index: 2;
+  background: white;
+  text-align: center;
+  line-height: $footer-height;
+  font-weight: 300; font-size: 20px;
+  left: 0px;
+
+
+  .action {
+     height: 100%; display: block;
+     color: #288CB3;
+     background: #f8f8f8;
+     border-radius: 6px;
+  }
 }
 
 .spinner-overlay{

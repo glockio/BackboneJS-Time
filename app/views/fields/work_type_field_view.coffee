@@ -1,8 +1,10 @@
 class App.Views.WorkTypeFieldView extends App.Views.FormFieldView
 
+  className: "hidden-focus-label field-wrapper work-type-wrapper"
+
   select_options: [
-    {key: "THis Is a Key", value: "This is a value"},
-    {key: "THis is another Key", value: "This is an another value"}
+    {key: "Time working on visual effects for a movie", value: "Time working on visual effects for a movie"},
+    {key: "Time spent reviewing work of junior artist", value: "Time spent reviewing work of junior artist"}
   ]
 
   initialize: (options)->
@@ -20,8 +22,9 @@ class App.Views.WorkTypeFieldView extends App.Views.FormFieldView
 
   tpl_string:
     '
-      <label> Work Type Select</label>
+
       <select name="work_type" id="work-type">
       </select>
+      <label id="work-type-label"> Work Type Select</label>
     '
 

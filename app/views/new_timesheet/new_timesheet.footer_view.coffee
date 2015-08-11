@@ -1,5 +1,6 @@
 class App.Views.NewTimeSheet.FooterView extends App.View
 
+  className: "new-timesheet-footer"
   initialize: (options={}) ->
     @_render()
     @_position()
