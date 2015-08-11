@@ -25,13 +25,13 @@
 
     <script id="submitted-template" type="text/template">
       <div class="success-wrapper">
-        <span class="success-icon"></span>
+        <span class="success-icon ion-ios-checkmark-outline valid-icon"></span>
         <div class="message">
           <div class="">
-            Thank you <span class="email"> <%= email %></span>
+            Thank you <strong class="email"> <%= email %></strong>
           </div>
           <div class="details">
-            You have logged 12 hours and 15 mins of work today
+            You have logged <%= hour %>  hours and <%= min %>  mins of work today
           </div>
         </div>
       </div>
